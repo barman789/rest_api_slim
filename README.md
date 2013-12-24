@@ -11,7 +11,7 @@ db_sql_dump contains the SQl Dump to create database.
 
 Description of REST Calls which are covered in the Application
 
-1. Authenticate: This is used to authenticate the User.
+a. Authenticate: This is used to authenticate the User.
 
 URL: /authenticate 
 HTTP Request Type: POST
@@ -20,7 +20,7 @@ Corresponding CURL Call: curl -H 'Content-type: application/json' -d '{"username
 Response On Success: status = 200 and token (to be used in other calls)
 Response on Failure: error Message
 
-2. Get All Properties: This is used to get all properties of the authenticated user
+b. Get All Properties: This is used to get all properties of the authenticated user
 
 URL: /properties
 HTTP Request Type: GET
@@ -29,7 +29,7 @@ Corresponding CURL Call: curl -u token:e5bdc8135126961e3756b03cca68777d -X GET h
 Response On Success: status = 200 and data containg properties
 Response on Failure: error Message
 
-3. GET Detail: This is used to get the Property Detail of 1 Particular Property
+c. GET Detail: This is used to get the Property Detail of 1 Particular Property
 
 URL: /properties/{property_id}
 HTTP Request Type: GET
@@ -38,20 +38,20 @@ Corresponding CURL Call: curl -u token:e5bdc8135126961e3756b03cca68777d -X GET h
 Response On Success: status = 200 and data containg property detail
 Response on Failure: error Message
 
-4. Add Property: 
+d. Add Property: 
 
 URL: /properties
 HTTP Request Type: POST
 Corresponding CURL Call: curl -u token:e5bdc8135126961e3756b03cca68777d -H 'Content-type: application/json' -d '{"name":"Property Name","description":"Property Description"}' -X POST http://localhost/properties
 
 
-5. Edit Property
+e. Edit Property
 
 URL: /properties/{property_id}
 HTTP Request Type: PUT
 Corresponding CURL Call: curl -u token:e5bdc8135126961e3756b03cca68777d -H 'Content-type: application/json' -d '{"name":"Property Name","description":"Property Description"}' -X PUT http://localhost/properties/1
 
-6. Delete Property
+f. Delete Property
 
 URL: /properties/{property_id}
 HTTP Request Type: DELETE
